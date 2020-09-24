@@ -118,7 +118,7 @@ public class Dibujo extends JPanel{
             try {
                 //for para dibujar 
                 for (int j = 0; j < 120; j++) {
-                    if (x1>0 & x1<470) {
+                    if (x1>=-250 & x1<470) {
                           x1=490-coordenada_x;
                     }
                 
@@ -127,6 +127,10 @@ public class Dibujo extends JPanel{
                 if (x1<470) {
                     System.out.println("draw pixel: "+x1);
                    this.coordenada_x= coordenada_x-10;
+                   this.coordenada_y= coordenada_y+5;
+                  
+                 
+                   
                    paint(getGraphics()); 
                    
                 }else  {
@@ -142,6 +146,9 @@ public class Dibujo extends JPanel{
           
                     if (x2>=470 & x2<=1035) {
                    this.coordenada_x= coordenada_x+10;
+                 
+                 
+                   
                    paint(getGraphics()); 
                     }else{
                       j=120;
@@ -157,15 +164,17 @@ public class Dibujo extends JPanel{
                 
                 //cordenada en Y
                 for (int j = 0; j < 120; j++) {
-                    if (y1>0 & y1<470) {
+                    if (y1>-250 & y1<470) {
                           y1=490-coordenada_y;
                     }
                 
                 this.hilo.sleep(30);
                 
                 if (y1<470) {
-                    System.out.println("draw pixel: -"+y1);
+                    System.out.println("draw pixel y1: -"+y1);
                    this.coordenada_y= coordenada_y-10;
+                   this.coordenada_x= coordenada_x-5;
+                  
                    paint(getGraphics()); 
                    
                 }else  {
@@ -181,6 +190,8 @@ public class Dibujo extends JPanel{
                     if (y2>=470 & y2<=1250) {
                         System.out.println("draw pixel: "+y2);
                    this.coordenada_y= coordenada_y+10;
+                   this.coordenada_x= coordenada_x-4;
+                  
                    paint(getGraphics()); 
                     }else{
                       j=120;
